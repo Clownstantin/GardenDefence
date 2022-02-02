@@ -8,10 +8,12 @@ namespace GardenDefence
         public void LoadNextLevel()
         {
             int currentIndex = SceneManager.GetActiveScene().buildIndex;
-            int sceneCount = SceneManager.sceneCount;
+            int sceneCount = SceneManager.sceneCountInBuildSettings;
 
-            if (currentIndex < sceneCount) SceneManager.LoadScene(currentIndex + 1);
+            if (currentIndex < sceneCount - 1) SceneManager.LoadScene(currentIndex + 1);
             else SceneManager.LoadScene(currentIndex - currentIndex);
         }
+
+        public void QuitGame() => Application.Quit();
     }
 }

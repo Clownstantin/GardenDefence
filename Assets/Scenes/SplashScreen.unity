@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 113281290}
   - component: {fileID: 113281289}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -445,7 +445,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 091549603977a4c4f832ddd20627336e, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -555,6 +555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2065a19931cf11540b7c47cedaba7120, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _levelLoader: {fileID: 5076376199616602587}
 --- !u!1 &879798548
 GameObject:
   m_ObjectHideFlags: 0
@@ -914,3 +915,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 905f82fc98944214488c4a73f9dab08e, type: 3}
+--- !u!114 &5076376199616602587 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5076376199230569887, guid: 905f82fc98944214488c4a73f9dab08e, type: 3}
+  m_PrefabInstance: {fileID: 5076376199616602586}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a94210425bd6bab45afaa6e25c082feb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
