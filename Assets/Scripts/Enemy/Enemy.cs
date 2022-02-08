@@ -25,7 +25,7 @@ namespace GardenDefence
                 DealDamage(projectile);
         }
 
-        public void SetColliderActive() => _collider.enabled = true;
+        private void SetColliderActive() => _collider.enabled = true;
 
         private void DealDamage(Projectile projectile)
         {

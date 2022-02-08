@@ -19,9 +19,6 @@ namespace GardenDefence
             }
         }
 
-        private void SpawnEnemy()
-        {
-            Instantiate(_enemyPrefab, transform.position, Quaternion.identity);
-        }
+        private void SpawnEnemy() => Instantiate(_enemyPrefab, transform.position, Quaternion.identity);
     }
 }
