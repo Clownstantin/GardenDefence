@@ -20,6 +20,7 @@ namespace GardenDefence
 
         private void AttemptToPlaceDefender()
         {
+            if (!_defender) return;
             int defenderCost = _defender.StarCost;
 
             if (_currencyDisplay.HasEnoughStars(defenderCost))

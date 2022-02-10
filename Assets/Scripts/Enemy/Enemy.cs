@@ -2,48 +2,62 @@ using UnityEngine;
 
 namespace GardenDefence
 {
-    [RequireComponent(typeof(Collider2D))]
+    [RequireComponent(typeof(Animator), typeof(Health))]
     public class Enemy : MonoBehaviour
     {
-        [SerializeField] private float _health = 100f;
-        [Header("VFX Settigs")]
-        [SerializeField] private GameObject _deathVFX;
-        [SerializeField] private Transform _effectPoint;
-        [SerializeField] private float _effectDuration = 1f;
-
+        private Health _myHealth;
+        private Defender _currentTarget;
         private Collider2D _collider;
+
+        protected Animator animator;
 
         private void Awake()
         {
+            animator = GetComponent<Animator>();
+            _myHealth = GetComponent<Health>();
             _collider = GetComponent<Collider2D>();
+        }
+
+        private void OnEnable()
+        {
+            _currentTarget = null;
             _collider.enabled = false;
         }
 
-        private void OnTriggerEnter2D(Collider2D collision)
+        private void Update() => ChangeAnimationState();
+
+        protected void DetectProjectile(Collider2D collision)
         {
             if (collision.TryGetComponent(out Projectile projectile))
-                DealDamage(projectile);
-        }
-
-        private void SetColliderActive() => _collider.enabled = true;
-
-        private void DealDamage(Projectile projectile)
-        {
-            _health -= projectile.Damage;
-            projectile.OnHit();
-
-            if (_health <= 0)
             {
-                TriggerDeathVFX();
-                Destroy(gameObject);
+                _myHealth.DealDamage(projectile.Damage);
+                projectile.OnHit();
             }
         }
 
-        private void TriggerDeathVFX()
+        protected void SetTarget(Defender target) => _currentTarget = target;
+
+        protected int GetAnimatorParamID(AnimatorControllerParameterType type)
         {
-            if (!_deathVFX) return;
-            var effect = Instantiate(_deathVFX, _effectPoint.position, Quaternion.identity);
-            Destroy(effect, _effectDuration);
+            foreach (var parameter in animator.parameters)
+            {
+                if (parameter.type == type)
+                    return parameter.nameHash;
+            }
+            return default;
         }
+
+        private void ChangeAnimationState() => animator.SetBool(GetAnimatorParamID(AnimatorControllerParameterType.Bool), _currentTarget);
+
+        #region AnimationEvents
+        private void SetColliderActive() => _collider.enabled = true;
+
+        private void AttackCurrentTarget(float damage)
+        {
+            if (!_currentTarget) return;
+            if (_currentTarget.TryGetComponent(out Health targetHealth))
+                targetHealth.DealDamage(damage);
+        }
+        #endregion
     }
 }

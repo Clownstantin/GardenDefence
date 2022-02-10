@@ -9,12 +9,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4291845101188937884}
-  - component: {fileID: -1390068083101328861}
+  - component: {fileID: 6045147650397661332}
+  - component: {fileID: 8703771677898605218}
   - component: {fileID: 4291845101188937882}
   - component: {fileID: 4291845101188937885}
   - component: {fileID: 3427660539915392885}
   - component: {fileID: 1724734137782167971}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LizardEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +38,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-1390068083101328861
+--- !u!114 &6045147650397661332
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -46,13 +47,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 4291845101188937886}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ecd2af185d03a04ab0493fad1fab17c, type: 3}
+  m_Script: {fileID: 11500000, guid: bf81830ab963b0a49a5a3a80af21e906, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 100
-  _deathVFX: {fileID: 3485484167884950864, guid: 6293ee4bfb98e394d817eb417dfd0bc7, type: 3}
+  _deathVFX: {fileID: 3485484167884950866, guid: 6293ee4bfb98e394d817eb417dfd0bc7, type: 3}
   _effectPoint: {fileID: 6256705946100113042}
   _effectDuration: 1
+--- !u!114 &8703771677898605218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4291845101188937886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3eb19cc08ed940444a71415749809186, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &4291845101188937882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,10 +107,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.6, y: -0.23999998}
+  m_Offset: {x: 0.08832097, y: 0.021756053}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -108,7 +121,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.4, y: 0.8}
+  m_Size: {x: 0.4387784, y: 0.7806108}
   m_EdgeRadius: 0
 --- !u!50 &1724734137782167971
 Rigidbody2D:
@@ -141,7 +154,7 @@ GameObject:
   m_Component:
   - component: {fileID: 126012049101154364}
   - component: {fileID: 2771004117636232577}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +169,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4765371319277460118}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.63, y: 0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4291845101188937884}
@@ -222,7 +235,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6256705946100113042}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EffectPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
