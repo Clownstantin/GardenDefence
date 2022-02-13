@@ -4,24 +4,30 @@ namespace GardenDefence
 {
     public class Health : MonoBehaviour
     {
-        [SerializeField] private float _health = 100f;
+        [SerializeField] private float _maxHealth = 100f;
         [Header("VFX Settigs")]
         [SerializeField] private ParticleSystem _deathVFX;
         [SerializeField] private Transform _effectPoint;
         [SerializeField] private float _effectDuration = 1f;
 
+        private float _currentHealth;
+
+        private void Awake() => ResetHp();
+
         public void DealDamage(float damage)
         {
-            _health -= damage;
+            _currentHealth -= damage;
 
-            if (_health <= Mathf.Epsilon)
+            if (_currentHealth <= Mathf.Epsilon)
             {
                 TriggerDeathVFX();
-
-                if (gameObject.layer == 3) gameObject.SetActive(false);
-                else Destroy(gameObject);
+                DestroyOrDeactivate();
             }
         }
+
+        public void ResetHp() => _currentHealth = _maxHealth;
+
+        protected virtual void DestroyOrDeactivate() => Destroy(gameObject);
 
         private void TriggerDeathVFX()
         {

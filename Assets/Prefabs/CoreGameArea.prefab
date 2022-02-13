@@ -70,4 +70,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 731071a908374434880fc95c587bfb9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _defenderPrefab: {fileID: 4939197306095441294, guid: 557f871206658214bb5e5a5e6fce5119, type: 3}
+  _uiController: {fileID: 5490369366674683861, guid: 99743f0f6f36cb949aae2e356113df9e, type: 3}

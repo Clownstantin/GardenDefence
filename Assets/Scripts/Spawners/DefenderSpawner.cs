@@ -4,15 +4,12 @@ namespace GardenDefence
 {
     public class DefenderSpawner : MonoBehaviour
     {
+        [SerializeField] private UIController _uiController;
+
         private Camera _camera;
         private Defender _defender;
-        private CurrencyDisplay _currencyDisplay;
 
-        private void Start()
-        {
-            _camera = Camera.main;
-            _currencyDisplay = FindObjectOfType<CurrencyDisplay>();
-        }
+        private void Start() => _camera = Camera.main;
 
         private void OnMouseDown() => AttemptToPlaceDefender();
 
@@ -23,10 +20,14 @@ namespace GardenDefence
             if (!_defender) return;
             int defenderCost = _defender.StarCost;
 
-            if (_currencyDisplay.HasEnoughStars(defenderCost))
+            if (_uiController.HasEnoughStars(defenderCost))
             {
-                Instantiate(_defender, GetSnappedPosition(), Quaternion.identity);
-                _currencyDisplay.SpendCurrency(defenderCost);
+                var enemy = Instantiate(_defender, GetSnappedPosition(), Quaternion.identity);
+
+                if (enemy.TryGetComponent(out Trophy trophy))
+                    trophy.SetCurrencyUI(_uiController);
+
+                _uiController.SpendCurrency(defenderCost);
             }
         }
 

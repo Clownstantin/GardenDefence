@@ -86,7 +86,7 @@ Transform:
   m_GameObject: {fileID: 7281793017309491762}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 7281793016798777380}
   - {fileID: 6594263147192603654}
@@ -174,7 +174,7 @@ Transform:
   m_GameObject: {fileID: 7281793018451767570}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7281793017309491773}
   m_Father: {fileID: 0}
@@ -221,6 +221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af4b0254b212ee34c9ea5e4ce5f04ae3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _capacity: 10
   _projectilePrefab: {fileID: 7863143339045602506, guid: d31948c77ec1c2b4fbc81b0c13f57a32, type: 3}
   _shootPoint: {fileID: 7281793016798777380}
 --- !u!95 &7281793018451767580

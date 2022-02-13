@@ -2,14 +2,16 @@ namespace GardenDefence
 {
     public class Trophy : Defender
     {
-        private CurrencyDisplay _currencyDisplay;
+        private UIController _uiController;
 
-        private void Start() => _currencyDisplay = FindObjectOfType<CurrencyDisplay>();
+        public void SetCurrencyUI(UIController display) => _uiController = display;
 
+        #region AnimationEvent
         private void AddCurrency(int amount)
         {
-            if (!_currencyDisplay) return;
-            _currencyDisplay.AddCurrency(amount);
+            if (!_uiController) return;
+            _uiController.AddCurrency(amount);
         }
+        #endregion
     }
 }

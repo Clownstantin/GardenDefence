@@ -3,14 +3,14 @@ using UnityEngine;
 namespace GardenDefence
 {
     [RequireComponent(typeof(AudioSource))]
-    public class LoadingController : MonoBehaviour
+    public class SplashSceneLoader : MonoBehaviour
     {
         [SerializeField] private LevelLoader _levelLoader;
 
         private AudioSource _audio;
         private float _clipSeconds;
 
-        private void Start()
+        private void Awake()
         {
             _audio = GetComponent<AudioSource>();
             _clipSeconds = _audio.clip.length;
@@ -21,7 +21,7 @@ namespace GardenDefence
         private void WaitSoundAndLoad()
         {
             _clipSeconds -= Time.deltaTime;
-            if (_clipSeconds <= 0) _levelLoader.LoadNextLevel();
+            if (_clipSeconds <= Mathf.Epsilon) _levelLoader.LoadNextLevel();
         }
     }
 }

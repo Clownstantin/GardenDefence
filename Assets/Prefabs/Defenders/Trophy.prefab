@@ -231,6 +231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _starCost: 50
+  _currencyDisplay: {fileID: 916484313860972627, guid: a596160a66427384d8b40032af9bb6b0, type: 3}
 --- !u!95 &4703543252212732206
 Animator:
   serializedVersion: 3

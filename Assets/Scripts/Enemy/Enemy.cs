@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace GardenDefence
 {
-    [RequireComponent(typeof(Animator), typeof(Health))]
+    [RequireComponent(typeof(Animator), typeof(Health), typeof(Collider2D))]
     public class Enemy : MonoBehaviour
     {
         private Health _myHealth;
@@ -22,6 +22,7 @@ namespace GardenDefence
         {
             _currentTarget = null;
             _collider.enabled = false;
+            _myHealth.ResetHp();
         }
 
         private void Update() => ChangeAnimationState();

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 543781006804294437}
-  - component: {fileID: 3294501784979747522}
+  - component: {fileID: 5628260878033031660}
   - component: {fileID: 5333919833206057388}
   - component: {fileID: 4694801998283070923}
   - component: {fileID: 7459451540205924205}
@@ -38,7 +38,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3294501784979747522
+--- !u!114 &5628260878033031660
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -47,13 +47,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 543781006804294439}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf81830ab963b0a49a5a3a80af21e906, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d535e96202d26f4794771f41e89f2e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 100
+  _maxHealth: 75
   _deathVFX: {fileID: 3485484167884950866, guid: 6293ee4bfb98e394d817eb417dfd0bc7, type: 3}
   _effectPoint: {fileID: 7696686363838414123}
   _effectDuration: 1
+  _enemyKillCounter: {fileID: 11400000, guid: c5da127d02ecf6043be288f14536e175, type: 2}
 --- !u!114 &5333919833206057388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,7 +169,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5448460183421341428}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.082, y: -0.359, z: 0}
+  m_LocalPosition: {x: -0.114, y: -0.023, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 543781006804294437}

@@ -1,20 +1,22 @@
+using System;
 using UnityEngine;
 
 namespace GardenDefence
 {
-    public class LoseTrigger : MonoBehaviour
+    public class LoseLiveTrigger : MonoBehaviour
     {
+        [SerializeField] private UIController _uiController;
         [SerializeField] private float _liveDamage = 1;
-        [SerializeField] private LivesDisplay _livesDisplay;
 
-        private void Start() => _livesDisplay = FindObjectOfType<LivesDisplay>();
+        public event Action EnemyKilled;
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.TryGetComponent(out Enemy enemy))
             {
                 enemy.gameObject.SetActive(false);
-                _livesDisplay.DecreaseLives(_liveDamage);
+                EnemyKilled?.Invoke();
+                _uiController.DecreaseLives(_liveDamage);
             }
         }
     }

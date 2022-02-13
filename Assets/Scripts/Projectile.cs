@@ -14,6 +14,6 @@ namespace GardenDefence
 
         private void Update() => _transform.Translate(Vector2.right * _projectileSpeed * Time.deltaTime);
 
-        public void OnHit() => Destroy(gameObject);
+        public void OnHit() => gameObject.SetActive(false);
     }
 }

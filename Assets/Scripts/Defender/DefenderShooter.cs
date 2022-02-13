@@ -3,20 +3,19 @@ using UnityEngine;
 namespace GardenDefence
 {
     [RequireComponent(typeof(Animator))]
-    public class DefenderShooter : MonoBehaviour
+    public class DefenderShooter : ObjectPool
     {
         [SerializeField] private Projectile _projectilePrefab;
         [SerializeField] private Transform _shootPoint;
 
         private Animator _animator;
         private EnemySpawner _myEnemySpawner;
-        private Transform[] _enemySpawnerChildren;
 
         private void Start()
         {
             _animator = GetComponent<Animator>();
+            InitPool(_projectilePrefab);
             SetLaneSpawner();
-            FindSpawnerChildren();
         }
 
         private void Update() => ChangeAnimationState();
@@ -41,29 +40,31 @@ namespace GardenDefence
                 if (parameter.type == AnimatorControllerParameterType.Bool)
                     return parameter.name;
             }
-
             return default;
-        }
-
-        private void FindSpawnerChildren()
-        {
-            if (!_myEnemySpawner) return;
-
-            int childCount = _myEnemySpawner.transform.childCount;
-            _enemySpawnerChildren = new Transform[childCount];
-
-            for (int i = 0; i < childCount; i++)
-                _enemySpawnerChildren[i] = _myEnemySpawner.transform.GetChild(i);
         }
 
         private bool IsEnemyOnLane()
         {
-            foreach (var enemy in _enemySpawnerChildren)
-                return enemy.gameObject.activeSelf;
+            Transform[] spawnerChildren = _myEnemySpawner.GetChildrenArray();
+            int childrenCount = _myEnemySpawner.GetChildrenArray().Length;
 
-            return default;
+            for (int i = 0; i < childrenCount; i++)
+            {
+                if (spawnerChildren[i].gameObject.activeSelf)
+                    return true;
+            }
+            return false;
         }
 
-        private void Shoot() => Instantiate(_projectilePrefab, _shootPoint.position, Quaternion.identity);
+        #region AnimationEvent
+        private void Shoot()
+        {
+            if (TryGetObject(out GameObject projectile))
+            {
+                projectile.SetActive(true);
+                projectile.transform.position = _shootPoint.position;
+            }
+        }
+        #endregion
     }
 }

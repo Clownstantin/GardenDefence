@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7ba2a1d126d9cdb44adb6c6de5ebd88a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a1f836203a47d7a469c55613efdbb036, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -281,74 +281,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &574707214
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5076376199230569881, guid: 905f82fc98944214488c4a73f9dab08e, type: 3}
-      propertyPath: m_Name
-      value: LevelLoader
-      objectReference: {fileID: 0}
-    - target: {fileID: 5076376199230569886, guid: 905f82fc98944214488c4a73f9dab08e, type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5076376199230569886, guid: 905f82fc98944214488c4a73f9dab08e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5076376199230569886, guid: 905f82fc98944214488c4a73f9dab08e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5076376199230569886, guid: 905f82fc98944214488c4a73f9dab08e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5076376199230569886, guid: 905f82fc98944214488c4a73f9dab08e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5076376199230569886, guid: 905f82fc98944214488c4a73f9dab08e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5076376199230569886, guid: 905f82fc98944214488c4a73f9dab08e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5076376199230569886, guid: 905f82fc98944214488c4a73f9dab08e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5076376199230569886, guid: 905f82fc98944214488c4a73f9dab08e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5076376199230569886, guid: 905f82fc98944214488c4a73f9dab08e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5076376199230569886, guid: 905f82fc98944214488c4a73f9dab08e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 905f82fc98944214488c4a73f9dab08e, type: 3}
---- !u!114 &574707215 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5076376199230569887, guid: 905f82fc98944214488c4a73f9dab08e, type: 3}
-  m_PrefabInstance: {fileID: 574707214}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a94210425bd6bab45afaa6e25c082feb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &575316521
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,7 +294,7 @@ GameObject:
   - component: {fileID: 575316523}
   - component: {fileID: 575316525}
   m_Layer: 5
-  m_Name: StartTxt
+  m_Name: Start Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -409,15 +341,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Start
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: bc562a33f7a33924fab8013ee387e988, type: 2}
-  m_sharedMaterial: {fileID: -7614534320502239823, guid: bc562a33f7a33924fab8013ee387e988, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e10fdf65b5edb6441ad34cc9d6fbbf96, type: 2}
+  m_sharedMaterial: {fileID: 5373261482458995305, guid: e10fdf65b5edb6441ad34cc9d6fbbf96, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4294901764
+  m_fontColor: {r: 0.014507294, g: 0, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -440,7 +372,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 17
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -528,7 +460,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 574707215}
+      - m_Target: {fileID: 5076376199230569887, guid: 905f82fc98944214488c4a73f9dab08e, type: 3}
         m_TargetAssemblyTypeName: GardenDefence.LevelLoader, Assembly-CSharp
         m_MethodName: LoadNextLevel
         m_Mode: 1
@@ -721,7 +653,7 @@ GameObject:
   - component: {fileID: 2081000168}
   - component: {fileID: 2081000170}
   m_Layer: 5
-  m_Name: QuitTxt
+  m_Name: Quit Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -768,15 +700,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Quit
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: bc562a33f7a33924fab8013ee387e988, type: 2}
-  m_sharedMaterial: {fileID: -7614534320502239823, guid: bc562a33f7a33924fab8013ee387e988, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e10fdf65b5edb6441ad34cc9d6fbbf96, type: 2}
+  m_sharedMaterial: {fileID: 5373261482458995305, guid: e10fdf65b5edb6441ad34cc9d6fbbf96, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190335
+  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -799,7 +731,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 17
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -887,7 +819,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 574707215}
+      - m_Target: {fileID: 5076376199230569887, guid: 905f82fc98944214488c4a73f9dab08e, type: 3}
         m_TargetAssemblyTypeName: GardenDefence.LevelLoader, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1

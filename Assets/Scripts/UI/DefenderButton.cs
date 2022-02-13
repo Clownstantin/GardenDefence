@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace GardenDefence
@@ -7,30 +8,16 @@ namespace GardenDefence
     {
         [SerializeField] private Defender _defenderPrefab;
 
-        private DefenderSpawner _defenderSpawner;
         private SpriteRenderer _renderer;
-        private DefenderButton[] _buttons;
-        private Color _defaultColor;
 
-        private void Start()
-        {
-            _renderer = GetComponent<SpriteRenderer>();
-            _defaultColor = _renderer.color;
+        public event Action<Defender> Clicked;
 
-            _defenderSpawner = FindObjectOfType<DefenderSpawner>();
-            _buttons = FindObjectsOfType<DefenderButton>();
-        }
+        private void Start() => _renderer = GetComponent<SpriteRenderer>();
 
-        private void OnMouseDown() => ChooseDefender();
+        private void OnMouseDown() => Clicked?.Invoke(_defenderPrefab);
 
-        private void ChooseDefender()
-        {
-            foreach (var item in _buttons)
-                item._renderer.color = _defaultColor;
+        private void OnMouseUp() => SetColor(Color.white);
 
-            _renderer.color = Color.white;
-
-            _defenderSpawner.SetSelectedDefender(_defenderPrefab);
-        }
+        public void SetColor(Color color) => _renderer.color = color;
     }
 }

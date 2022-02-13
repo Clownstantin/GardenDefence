@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6378726402928870314}
   - component: {fileID: 6378726402928870315}
-  - component: {fileID: 6378726402928870312}
   - component: {fileID: 6378726402928870313}
+  - component: {fileID: 2132966715980376606}
   m_Layer: 0
   m_Name: Cactus Button
   m_TagString: Untagged
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6378726402928870309}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.22277777, y: 0.1, z: 0}
+  m_LocalPosition: {x: -0.11166666, y: 0.1, z: 0}
   m_LocalScale: {x: 0.09, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6378726404610139556}
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 2926308287287478423, guid: 4def58052f607e44eb0487da1c9a6389, type: 3}
-  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
+  m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -84,19 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6378726402928870312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6378726402928870309}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c47695eeab931834fb3335bf98764259, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _defenderPrefab: {fileID: 4939197306095441294, guid: 557f871206658214bb5e5a5e6fce5119, type: 3}
 --- !u!61 &6378726402928870313
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -123,6 +110,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.2, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2132966715980376606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6378726402928870309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9a00e5931c0f4947831bcf58ce17104, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _defenderPrefab: {fileID: 4939197306095441294, guid: 557f871206658214bb5e5a5e6fce5119, type: 3}
 --- !u!1 &6378726404114425405
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,6 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6378726404114425346}
+  - component: {fileID: 5173802745826813754}
   m_Layer: 0
   m_Name: Defender Buttons
   m_TagString: Untagged
@@ -154,6 +155,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5173802745826813754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6378726404114425405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c47695eeab931834fb3335bf98764259, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _buttons:
+  - {fileID: 2132966715980376606}
+  - {fileID: 4840782707422546582}
+  - {fileID: 6702469066946119870}
+  - {fileID: 4723795586914986835}
+  _defenderSpawner: {fileID: 0}
 --- !u!1 &6378726404268456378
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,8 +183,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6378726404268456379}
   - component: {fileID: 6378726404268456376}
-  - component: {fileID: 6378726404268456377}
   - component: {fileID: 6378726404268456382}
+  - component: {fileID: 4840782707422546582}
   m_Layer: 0
   m_Name: Trophy Button
   m_TagString: Untagged
@@ -181,7 +200,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6378726404268456378}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.11077775, y: 0, z: 0}
+  m_LocalPosition: {x: -0.22188887, y: 0, z: 0}
   m_LocalScale: {x: 0.15, y: 1.5, z: 1.3392699}
   m_Children: []
   m_Father: {fileID: 6378726404610139556}
@@ -228,7 +247,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 422e643d1727d9545bec4f566b02a659, type: 3}
-  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
+  m_Color: {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -238,19 +257,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6378726404268456377
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6378726404268456378}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c47695eeab931834fb3335bf98764259, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _defenderPrefab: {fileID: 3792183248885811983, guid: cfd281836c2e9394488297c60678db29, type: 3}
 --- !u!61 &6378726404268456382
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -277,6 +283,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.74, y: 0.6658671}
   m_EdgeRadius: 0
+--- !u!114 &4840782707422546582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6378726404268456378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9a00e5931c0f4947831bcf58ce17104, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _defenderPrefab: {fileID: 3792183248885811983, guid: cfd281836c2e9394488297c60678db29, type: 3}
 --- !u!1 &6378726404492278400
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,8 +306,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6378726404492278401}
   - component: {fileID: 6378726404492278404}
-  - component: {fileID: 6378726404492278406}
   - component: {fileID: 6378726404492278407}
+  - component: {fileID: 6702469066946119870}
   m_Layer: 0
   m_Name: Gnome Button
   m_TagString: Untagged
@@ -351,7 +370,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 3130550414927973559, guid: c70d5b79f3b920848a032d09889f7456, type: 3}
-  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
+  m_Color: {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -361,19 +380,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6378726404492278406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6378726404492278400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c47695eeab931834fb3335bf98764259, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _defenderPrefab: {fileID: 7281793018451767582, guid: 8cea731e849ecff41af996c72bdc2e30, type: 3}
 --- !u!61 &6378726404492278407
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -400,6 +406,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.1688404, y: 1.0950224}
   m_EdgeRadius: 0
+--- !u!114 &6702469066946119870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6378726404492278400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9a00e5931c0f4947831bcf58ce17104, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _defenderPrefab: {fileID: 7281793018451767582, guid: 8cea731e849ecff41af996c72bdc2e30, type: 3}
 --- !u!1 &6378726404558206820
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,8 +429,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6378726404558206821}
   - component: {fileID: 6378726404558206824}
-  - component: {fileID: 6378726404558206827}
   - component: {fileID: 6378726404558206826}
+  - component: {fileID: 4723795586914986835}
   m_Layer: 0
   m_Name: Gravestone Button
   m_TagString: Untagged
@@ -474,7 +493,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 0d210163ebfcf0e459f79a06819992c5, type: 3}
-  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
+  m_Color: {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -484,19 +503,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6378726404558206827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6378726404558206820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c47695eeab931834fb3335bf98764259, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _defenderPrefab: {fileID: 6532667693073099878, guid: 102fb25a4e6d9904b87c6301af005969, type: 3}
 --- !u!61 &6378726404558206826
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -523,6 +529,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.1688404, y: 1.1022624}
   m_EdgeRadius: 0
+--- !u!114 &4723795586914986835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6378726404558206820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9a00e5931c0f4947831bcf58ce17104, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _defenderPrefab: {fileID: 6532667693073099878, guid: 102fb25a4e6d9904b87c6301af005969, type: 3}
 --- !u!1 &6378726404610139559
 GameObject:
   m_ObjectHideFlags: 0
