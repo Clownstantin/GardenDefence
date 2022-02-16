@@ -13,7 +13,7 @@ namespace GardenDefence
         public void ResetPool()
         {
             foreach (var enemy in _pool)
-                Destroy(enemy);
+                enemy.SetActive(false);
 
             _pool.Clear();
             _pool = null;

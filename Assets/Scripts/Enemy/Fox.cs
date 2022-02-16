@@ -9,11 +9,11 @@ namespace GardenDefence
             DetectProjectile(collision);
 
             if (collision.TryGetComponent(out Gravestone gravestone))
-                TriggerJump();
+                TriggerJumpAnimation();
             else if (collision.TryGetComponent(out Defender defender))
                 SetTarget(defender);
         }
 
-        private void TriggerJump() => animator.SetTrigger(GetAnimatorParamID(AnimatorControllerParameterType.Trigger));
+        private void TriggerJumpAnimation() => animator.SetTrigger(GetAnimatorParamID(AnimatorControllerParameterType.Trigger));
     }
 }

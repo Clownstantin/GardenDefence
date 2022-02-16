@@ -9,6 +9,7 @@ public static class CanvasGroupExtensions
         canvasGroup.blocksRaycasts = true;
     }
 
+
     public static void Close(this CanvasGroup canvasGroup)
     {
         canvasGroup.alpha = 0;

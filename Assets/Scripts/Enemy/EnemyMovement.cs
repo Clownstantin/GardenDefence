@@ -11,6 +11,8 @@ namespace GardenDefence
 
         private void Update() => _transform.Translate(Vector2.left * _currentSpeed * Time.deltaTime);
 
+        #region AnimationEvent
         private void SetMoveSpeed(float speed) => _currentSpeed = speed;
+        #endregion
     }
 }

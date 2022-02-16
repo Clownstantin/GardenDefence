@@ -4,7 +4,8 @@ namespace GardenDefence
 {
     public class DefenderSpawner : MonoBehaviour
     {
-        [SerializeField] private UIController _uiController;
+        [SerializeField] private GameUIController _uiController;
+        [SerializeField] private Transform _parentForDefender;
 
         private Camera _camera;
         private Defender _defender;
@@ -23,6 +24,7 @@ namespace GardenDefence
             if (_uiController.HasEnoughStars(defenderCost))
             {
                 var enemy = Instantiate(_defender, GetSnappedPosition(), Quaternion.identity);
+                enemy.transform.SetParent(_parentForDefender);
 
                 if (enemy.TryGetComponent(out Trophy trophy))
                     trophy.SetCurrencyUI(_uiController);

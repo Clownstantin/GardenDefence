@@ -3,9 +3,10 @@ using UnityEngine;
 
 namespace GardenDefence
 {
+    [RequireComponent(typeof(BoxCollider2D))]
     public class LoseLiveTrigger : MonoBehaviour
     {
-        [SerializeField] private UIController _uiController;
+        [SerializeField] private GameUIController _uiController;
         [SerializeField] private float _liveDamage = 1;
 
         public event Action EnemyKilled;

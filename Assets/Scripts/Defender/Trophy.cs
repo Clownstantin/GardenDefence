@@ -2,9 +2,9 @@ namespace GardenDefence
 {
     public class Trophy : Defender
     {
-        private UIController _uiController;
+        private GameUIController _uiController;
 
-        public void SetCurrencyUI(UIController display) => _uiController = display;
+        public void SetCurrencyUI(GameUIController display) => _uiController = display;
 
         #region AnimationEvent
         private void AddCurrency(int amount)

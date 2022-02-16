@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf81830ab963b0a49a5a3a80af21e906, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 50
+  _maxHealth: 20
   _deathVFX: {fileID: 3485484167884950866, guid: 6293ee4bfb98e394d817eb417dfd0bc7, type: 3}
   _effectPoint: {fileID: 40291599353653257}
   _effectDuration: 1
@@ -231,7 +231,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _starCost: 50
-  _currencyDisplay: {fileID: 916484313860972627, guid: a596160a66427384d8b40032af9bb6b0, type: 3}
 --- !u!95 &4703543252212732206
 Animator:
   serializedVersion: 3

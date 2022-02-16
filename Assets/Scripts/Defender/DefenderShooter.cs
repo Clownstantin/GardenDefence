@@ -20,6 +20,8 @@ namespace GardenDefence
 
         private void Update() => ChangeAnimationState();
 
+        private void OnDestroy() => ResetPool();
+
         private void ChangeAnimationState() => _animator.SetBool(GetAnimatorBoolParamName(), IsEnemyOnLane());
 
         private void SetLaneSpawner()
@@ -45,6 +47,8 @@ namespace GardenDefence
 
         private bool IsEnemyOnLane()
         {
+            if (!_myEnemySpawner) return false;
+
             Transform[] spawnerChildren = _myEnemySpawner.GetChildrenArray();
             int childrenCount = _myEnemySpawner.GetChildrenArray().Length;
 

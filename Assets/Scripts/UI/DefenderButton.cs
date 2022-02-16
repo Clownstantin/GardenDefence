@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 
 namespace GardenDefence
@@ -7,12 +8,17 @@ namespace GardenDefence
     public class DefenderButton : MonoBehaviour
     {
         [SerializeField] private Defender _defenderPrefab;
+        [SerializeField] private TMP_Text _costText;
 
         private SpriteRenderer _renderer;
 
         public event Action<Defender> Clicked;
 
-        private void Start() => _renderer = GetComponent<SpriteRenderer>();
+        private void Start()
+        {
+            _renderer = GetComponent<SpriteRenderer>();
+            _costText.text = _defenderPrefab.StarCost.ToString();
+        }
 
         private void OnMouseDown() => Clicked?.Invoke(_defenderPrefab);
 

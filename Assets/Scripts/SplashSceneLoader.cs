@@ -21,7 +21,13 @@ namespace GardenDefence
         private void WaitSoundAndLoad()
         {
             _clipSeconds -= Time.deltaTime;
-            if (_clipSeconds <= Mathf.Epsilon) _levelLoader.LoadNextLevel();
+            if (_clipSeconds <= Mathf.Epsilon)
+            {
+                if (_levelLoader.CurrentIndex == 0)
+                    _levelLoader.LoadNextLevel();
+                else
+                    _levelLoader.LoadStartScene();
+            }
         }
     }
 }

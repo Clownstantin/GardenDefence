@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _projectileSpeed: 3
   _damage: 50
+  _bodyTransform: {fileID: 7739521491707547057}
 --- !u!61 &1725245513044529193
 BoxCollider2D:
   m_ObjectHideFlags: 0

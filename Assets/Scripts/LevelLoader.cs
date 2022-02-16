@@ -5,6 +5,8 @@ namespace GardenDefence
 {
     public class LevelLoader : MonoBehaviour
     {
+        public int CurrentIndex => SceneManager.GetActiveScene().buildIndex;
+
         public void LoadNextLevel()
         {
             int currentIndex = SceneManager.GetActiveScene().buildIndex;
@@ -14,24 +16,30 @@ namespace GardenDefence
                 SceneManager.LoadScene(currentIndex + 1);
         }
 
-        #region UnityEvents
-        public void LoadGameOver()
+        public void LoadStartScene()
         {
-            int lastLevelIndex = SceneManager.sceneCountInBuildSettings - 1;
-            SceneManager.LoadScene(lastLevelIndex);
+            Time.timeScale = 1;
+            int sceneCount = SceneManager.sceneCountInBuildSettings;
+            SceneManager.LoadScene(sceneCount - sceneCount + 1);
         }
 
+        #region UnityEvents
         public void RestartLevel()
         {
             int currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
             SceneManager.LoadScene(currentLevelIndex);
         }
 
-        public void LoadFirstScene()
+        public void LoadOptionsScreen()
         {
-            Time.timeScale = 1; // хз ебать
-            int sceneCount = SceneManager.sceneCountInBuildSettings;
-            SceneManager.LoadScene(sceneCount - sceneCount);
+            int optionsIndex = SceneManager.sceneCountInBuildSettings - 2;
+            SceneManager.LoadScene(optionsIndex);
+        }
+
+        public void LoadGameOver()
+        {
+            int lastLevelIndex = SceneManager.sceneCountInBuildSettings - 1;
+            SceneManager.LoadScene(lastLevelIndex);
         }
 
         public void QuitGame() => Application.Quit();

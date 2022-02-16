@@ -876,7 +876,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5076376199230569887, guid: 905f82fc98944214488c4a73f9dab08e, type: 3}
         m_TargetAssemblyTypeName: GardenDefence.LevelLoader, Assembly-CSharp
-        m_MethodName: LoadFirstScene
+        m_MethodName: LoadStartScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

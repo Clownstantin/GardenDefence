@@ -15,6 +15,21 @@ EditorBuildSettings:
     path: Assets/Scenes/Level 1.unity
     guid: 16b4d86548276a94b96f89ec6f2c0b5a
   - enabled: 1
+    path: Assets/Scenes/Level 2.unity
+    guid: 4744b81422ef04d45a32029e49fa52a3
+  - enabled: 1
+    path: Assets/Scenes/Level 3.unity
+    guid: 55fcd8eeab8720a468af36442658cef3
+  - enabled: 1
+    path: Assets/Scenes/Level 4.unity
+    guid: c47d13212bb37f643bf01743d5ecb30c
+  - enabled: 1
+    path: Assets/Scenes/Ending SplashScreen.unity
+    guid: ab6e6af198cafcd438cc802eb8df0996
+  - enabled: 1
+    path: Assets/Scenes/OptionsScreen.unity
+    guid: b9dff9b5ef0c08047b8b311cab13e009
+  - enabled: 1
     path: Assets/Scenes/GameOver Scene.unity
     guid: a0398e0158896dc46a3e8422b36f80b0
   m_configObjects: {}

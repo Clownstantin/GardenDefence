@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d535e96202d26f4794771f41e89f2e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 75
+  _maxHealth: 300
   _deathVFX: {fileID: 3485484167884950866, guid: 6293ee4bfb98e394d817eb417dfd0bc7, type: 3}
   _effectPoint: {fileID: 7696686363838414123}
   _effectDuration: 1
@@ -111,7 +111,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.113586426, y: 0.0067647696}
+  m_Offset: {x: 0.0020427704, y: 0.016015053}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -122,7 +122,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.90086174, y: 0.36269498}
+  m_Size: {x: 0.94711304, y: 0.8446913}
   m_EdgeRadius: 0
 --- !u!50 &4583382419591757334
 Rigidbody2D:

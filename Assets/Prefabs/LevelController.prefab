@@ -55,7 +55,7 @@ MonoBehaviour:
   _levelLoader: {fileID: 5076376199230569887, guid: 905f82fc98944214488c4a73f9dab08e, type: 3}
   _uIController: {fileID: 0}
   _levelCompleteGroup: {fileID: 0}
-  _enemiesCounter: {fileID: 11400000, guid: c5da127d02ecf6043be288f14536e175, type: 2}
+  _enemyKillCounter: {fileID: 11400000, guid: c5da127d02ecf6043be288f14536e175, type: 2}
 --- !u!114 &7195366974281214135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,7 +81,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c1c6108916c0bd24da64d0ab5b34952d, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.3
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0

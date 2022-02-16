@@ -22,7 +22,10 @@ namespace GardenDefence
         private void ChooseDefender(Defender defender)
         {
             foreach (var button in _buttons)
+            {
+                if (!button.enabled) continue;
                 button.SetColor(Color.gray);
+            }
 
             _defenderSpawner.SetSelectedDefender(defender);
         }

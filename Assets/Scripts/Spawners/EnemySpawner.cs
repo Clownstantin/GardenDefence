@@ -8,6 +8,7 @@ namespace GardenDefence
     public class EnemySpawner : ObjectPool
     {
         [SerializeField] private Enemy[] _enemies;
+        [SerializeField] private Transform _warningImage;
 
         [Header("Spawn Settings")]
         [SerializeField] private float _minSpawnDelay = 1f;
@@ -17,26 +18,17 @@ namespace GardenDefence
 
         public event Action EnemySpawned;
 
-        private void Awake() => InitPool(_enemies);
-
-        private IEnumerator Start()
+        private void Awake()
         {
-            while (_isSpawning)
-            {
-                yield return new WaitForSeconds(Random.Range(_minSpawnDelay, _maxSpawnDelay));
-
-                if (TryGetObject(out GameObject enemy))
-                {
-                    enemy.SetActive(true);
-                    EnemySpawned?.Invoke();
-                    enemy.transform.position = transform.position;
-                }
-            }
+            InitPool(_enemies);
+            _warningImage.SetParent(null);
         }
+
+        private void Start() => StartCoroutine(SpawnEnemy());
 
         public void StopEnemySpawn()
         {
-            StopCoroutine(Start());
+            StopCoroutine(SpawnEnemy());
             _isSpawning = false;
         }
 
@@ -49,6 +41,24 @@ namespace GardenDefence
                 childrenArray[i] = transform.GetChild(i);
 
             return childrenArray;
+        }
+
+        private IEnumerator SpawnEnemy()
+        {
+            while (_isSpawning)
+            {
+                yield return new WaitForSeconds(Random.Range(_minSpawnDelay, _maxSpawnDelay));
+
+                _warningImage.gameObject.SetActive(false);
+
+                if (TryGetObject(out GameObject enemy))
+                {
+                    enemy.SetActive(true);
+                    enemy.transform.position = transform.position;
+
+                    EnemySpawned?.Invoke();
+                }
+            }
         }
     }
 }
