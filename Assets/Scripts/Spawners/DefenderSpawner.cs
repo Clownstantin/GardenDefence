@@ -23,10 +23,10 @@ namespace GardenDefence
 
             if (_uiController.HasEnoughStars(defenderCost))
             {
-                var enemy = Instantiate(_defender, GetSnappedPosition(), Quaternion.identity);
-                enemy.transform.SetParent(_parentForDefender);
+                var defender = Instantiate(_defender, GetSnappedPosition(), Quaternion.identity);
+                defender.transform.SetParent(_parentForDefender);
 
-                if (enemy.TryGetComponent(out Trophy trophy))
+                if (defender.TryGetComponent(out Trophy trophy))
                     trophy.SetCurrencyUI(_uiController);
 
                 _uiController.SpendCurrency(defenderCost);

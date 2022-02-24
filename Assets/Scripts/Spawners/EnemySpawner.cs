@@ -1,5 +1,6 @@
 using System;
-using System.Collections;
+using System.Threading;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -15,6 +16,7 @@ namespace GardenDefence
         [SerializeField] private float _maxSpawnDelay = 5f;
 
         private bool _isSpawning = true;
+        private CancellationTokenSource _tokenSource = new CancellationTokenSource();
 
         public event Action EnemySpawned;
 
@@ -24,11 +26,21 @@ namespace GardenDefence
             _warningImage.SetParent(null);
         }
 
-        private void Start() => StartCoroutine(SpawnEnemy());
+        private async void Start()
+        {
+            await SpawnEnemy(_tokenSource.Token).SuppressCancellationThrow();
+
+            if (_tokenSource.IsCancellationRequested)
+            {
+                _tokenSource.Dispose();
+                _tokenSource = null;
+                print("aboba");
+            }
+        }
 
         public void StopEnemySpawn()
         {
-            StopCoroutine(SpawnEnemy());
+            _tokenSource.Cancel();
             _isSpawning = false;
         }
 
@@ -43,11 +55,12 @@ namespace GardenDefence
             return childrenArray;
         }
 
-        private IEnumerator SpawnEnemy()
+        // Experimental
+        private async UniTask SpawnEnemy(CancellationToken token)
         {
             while (_isSpawning)
             {
-                yield return new WaitForSeconds(Random.Range(_minSpawnDelay, _maxSpawnDelay));
+                await UniTask.Delay(TimeSpan.FromSeconds(Random.Range(_minSpawnDelay, _maxSpawnDelay)), cancellationToken: token);
 
                 _warningImage.gameObject.SetActive(false);
 

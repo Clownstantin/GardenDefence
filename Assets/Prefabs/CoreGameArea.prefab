@@ -73,6 +73,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _uiController: {fileID: 0}
   _parentForDefender: {fileID: 5704832377645308609}
+  _enemySpawners: []
 --- !u!1 &3647544018488955000
 GameObject:
   m_ObjectHideFlags: 0

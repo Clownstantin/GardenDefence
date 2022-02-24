@@ -962,6 +962,50 @@ PrefabInstance:
       propertyPath: _uiController
       value: 
       objectReference: {fileID: 1481685924}
+    - target: {fileID: 759428315319315715, guid: 619d1acc911e382449a8aaa547a9fc59, type: 3}
+      propertyPath: _enemySpawners.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 759428315319315715, guid: 619d1acc911e382449a8aaa547a9fc59, type: 3}
+      propertyPath: _enemySpawners.Array.data[0]
+      value: 
+      objectReference: {fileID: 1228622789}
+    - target: {fileID: 759428315319315715, guid: 619d1acc911e382449a8aaa547a9fc59, type: 3}
+      propertyPath: _enemySpawners.Array.data[1]
+      value: 
+      objectReference: {fileID: 79729258}
+    - target: {fileID: 759428315319315715, guid: 619d1acc911e382449a8aaa547a9fc59, type: 3}
+      propertyPath: _enemySpawners.Array.data[2]
+      value: 
+      objectReference: {fileID: 8258005}
+    - target: {fileID: 759428315319315715, guid: 619d1acc911e382449a8aaa547a9fc59, type: 3}
+      propertyPath: _enemySpawners.Array.data[3]
+      value: 
+      objectReference: {fileID: 1180083248}
+    - target: {fileID: 759428315319315715, guid: 619d1acc911e382449a8aaa547a9fc59, type: 3}
+      propertyPath: _enemySpawners.Array.data[4]
+      value: 
+      objectReference: {fileID: 1067184587}
+    - target: {fileID: 759428315319315715, guid: 619d1acc911e382449a8aaa547a9fc59, type: 3}
+      propertyPath: _enemySpawners.Array.data[5]
+      value: 
+      objectReference: {fileID: 1067184587}
+    - target: {fileID: 759428315319315715, guid: 619d1acc911e382449a8aaa547a9fc59, type: 3}
+      propertyPath: _enemySpawners.Array.data[6]
+      value: 
+      objectReference: {fileID: 1067184587}
+    - target: {fileID: 759428315319315715, guid: 619d1acc911e382449a8aaa547a9fc59, type: 3}
+      propertyPath: _enemySpawners.Array.data[7]
+      value: 
+      objectReference: {fileID: 1067184587}
+    - target: {fileID: 759428315319315715, guid: 619d1acc911e382449a8aaa547a9fc59, type: 3}
+      propertyPath: _enemySpawners.Array.data[8]
+      value: 
+      objectReference: {fileID: 1067184587}
+    - target: {fileID: 759428315319315715, guid: 619d1acc911e382449a8aaa547a9fc59, type: 3}
+      propertyPath: _enemySpawners.Array.data[9]
+      value: 
+      objectReference: {fileID: 1067184587}
     - target: {fileID: 759428315319315725, guid: 619d1acc911e382449a8aaa547a9fc59, type: 3}
       propertyPath: m_RootOrder
       value: 2
